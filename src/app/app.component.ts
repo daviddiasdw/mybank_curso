@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'mybank';
+
+  extrato: any[];
+
+  transferir($event: any){
+    this.extrato.push($event);
+  }
 }

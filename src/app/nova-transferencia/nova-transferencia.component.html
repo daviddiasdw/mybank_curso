@@ -1,0 +1,13 @@
+<div class="form-group"><hr>
+  <form (ngSubmit)="transferir()">
+    <div class="mb-1">
+      <label for="exampleInputconta1" class="form-label">Conta</label>
+      <input type="text" class="form-control" id="exampleInputconta1" [(ngModel)]="conta" name="conta">
+    </div>
+    <div class="mb-1">
+      <label for="exampleInputvalor1" class="form-label">Valor</label>
+      <input type="text" class="form-control" id="exampleInputvalor1" [(ngModel)]="valor" name="valor">
+    </div><hr>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+</div>
