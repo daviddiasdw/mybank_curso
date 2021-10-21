@@ -1,35 +1,21 @@
-<!-- <table class="table">
+<table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Conta</th>
+      <th scope="col">Valor</th>
+      <th scope="col">Data</th>
     </tr>
   </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+  <tbody *ngIf="transferencia?.length; else listavazia">
+    <tr *ngFor="let extrato of transferencia">
+      <td>{{extrato.conta}}</td>
+      <td>{{extrato.valor | currency}}</td>
+      <td>{{extrato.data | date: "short"}}</td>
     </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
-      <td>@twitter</td>
-    </tr>
+    <tr></tr>
   </tbody>
-</table> -->
-<div *ngFor="let extrato of transferencia">
+</table>
+<ng-template #listavazia>
+  <p>Nenhuma operação realizada</p>
+</ng-template>
 
-  <p>valor: {{extrato?.conta}}</p>
-  <p>valor: {{extrato?.valor}}</p>
-
-</div>

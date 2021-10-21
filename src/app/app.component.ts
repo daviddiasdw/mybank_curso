@@ -8,9 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'mybank';
 
-  extrato: any[];
+  extrato: any[] = [];
 
   transferir($event: any){
-    this.extrato.push($event);
+    const transferencia = {...$event, data: new Date()}
+    this.extrato.push(transferencia);
   }
 }
