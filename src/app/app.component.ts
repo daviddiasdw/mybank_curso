@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TransferenciaService } from './services/transferencia.service';
 
 @Component({
   selector: 'app-root',
@@ -8,10 +9,12 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'mybank';
 
-  extrato: any[] = [];
+  constructor(private service: TransferenciaService){
+
+  }
 
   transferir($event: any){
-    const transferencia = {...$event, data: new Date()}
-    this.extrato.push(transferencia);
+    this.service.add($event)
+
   }
 }
