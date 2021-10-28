@@ -9,12 +9,5 @@ import { TransferenciaService } from './services/transferencia.service';
 export class AppComponent {
   title = 'mybank';
 
-  constructor(private service: TransferenciaService){
-
-  }
-
-  transferir($event: any){
-    this.service.add($event)
-
-  }
+  constructor(private service: TransferenciaService){}
 }

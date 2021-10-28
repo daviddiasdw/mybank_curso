@@ -6,16 +6,13 @@
       <th scope="col">Data</th>
     </tr>
   </thead>
-  <tbody *ngIf="transferencia?.length; else listavazia">
-    <tr *ngFor="let extrato of transferencia">
-      <td>{{extrato.conta}}</td>
-      <td>{{extrato.valor | currency}}</td>
-      <td>{{extrato.data | date: "short"}}</td>
+  <tbody>
+    <tr *ngFor="let transferencia of extrato">
+      <td>{{transferencia.conta}}</td>
+      <td>{{transferencia.valor | currency}}</td>
+      <td>{{transferencia.data | date: "short"}}</td>
     </tr>
     <tr></tr>
   </tbody>
 </table>
-<ng-template #listavazia>
-  <p>Nenhuma operação realizada</p>
-</ng-template>
 

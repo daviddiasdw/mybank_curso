@@ -8,15 +8,15 @@ import { TransferenciaService } from '../services/transferencia.service';
   styleUrls: ['./extrato.component.scss']
 })
 export class ExtratoComponent implements OnInit {
-  transferencia: any[];
+  extrato: any[];
 
   constructor(private service: TransferenciaService) { }
 
   ngOnInit(): void {
     this.service.all().subscribe((transferencias: Transferencia[]) => {
       console.table(transferencias);
-      this.transferencia = transferencias;
-    })
+      this.extrato = transferencias;
+    });
   }
 
 }

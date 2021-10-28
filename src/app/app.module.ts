@@ -9,11 +9,12 @@ import { ExtratoComponent } from './extrato/extrato.component';
 import { registerLocaleData } from '@angular/common';
 import localePt from '@angular/common/locales/pt';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
 
 registerLocaleData(localePt)
 
 @NgModule({
-  declarations: [ AppComponent, NovaTransferenciaComponent, ExtratoComponent ],
+  declarations: [ AppComponent, NovaTransferenciaComponent, ExtratoComponent, HomeComponent ],
   imports: [ BrowserModule, AppRoutingModule, FormsModule, HttpClientModule ],
   providers: [{provide: LOCALE_ID, useValue: 'pt' },{provide: DEFAULT_CURRENCY_CODE, useValue: 'BRL' }],
   bootstrap: [AppComponent]
